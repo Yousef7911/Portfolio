@@ -233,22 +233,24 @@ body {
 
 @media screen and (max-width: 768px) {
     .header {
-      padding: 20px 5%;
+        flex-direction: column; /* Change flex direction to stack items vertically */
+        align-items: center; /* Center align items */
     }
     
     .navbar {
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
-      }
+    }
       
-      .navbar a {
+    .navbar a {
         font-size: 14px; /* Adjust the font size */
         margin: 5px 0; /* Adjust the vertical margin */
-      }
+    }
     
     .logo {
       font-size: 20px;
+      margin-bottom: 20px;
     }
   
     .home {
