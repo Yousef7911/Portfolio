@@ -234,6 +234,7 @@ body {
 @media screen and (max-width: 768px) {
     .header {
       padding: 20px 5%;
+      align-items: center;
     }
     
     .navbar {
