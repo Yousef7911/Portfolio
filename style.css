@@ -237,15 +237,15 @@ body {
     }
     
     .navbar {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-    
-    .navbar a {
-      margin: 10px 0;
-    }
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      
+      .navbar a {
+        font-size: 14px; /* Adjust the font size */
+        margin: 5px 0; /* Adjust the vertical margin */
+      }
     
     .logo {
       font-size: 20px;
