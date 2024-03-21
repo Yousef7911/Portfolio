@@ -240,17 +240,16 @@ body {
     .navbar {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 40px;
     }
       
     .navbar a {
-        font-size: 12px; /* Adjust the font size */
-        margin: 10px 0; /* Adjust the vertical margin */
+        font-size: 15px; /* Adjust the font size */
+        margin: 15px 0; /* Adjust the vertical margin */
     }
     
     .logo {
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   
     .home {
