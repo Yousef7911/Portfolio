@@ -79,7 +79,7 @@ section {
     align-items: center;
     padding: 0 9%;
     background: url('home.png') no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
 }
 
