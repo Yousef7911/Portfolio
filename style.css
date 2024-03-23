@@ -39,6 +39,11 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
 }
 
 .logo {
@@ -421,6 +426,166 @@ span {
     width: 95%;
 }
 
+
+.games {
+    background: var(--second-bg-color);
+}
+
+.games h2 {
+    margin-bottom: 4rem;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.games-container .game-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.game-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.game-box:hover img {
+    transform: scale(1.1);   
+}
+
+.game-box .game-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--bg-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.game-box:hover .game-layer {
+    transform: translateY(0);
+}
+
+.game-layer h4 {
+    font-size: 3rem;
+}
+
+.game-layer h5 {
+    font-size: 2rem;
+}
+
+.game-layer p {
+    font-size: 1.5rem;
+    margin: .3rem 0 1rem;
+}
+
+.game-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.game-layer a i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form .input-box input[type=number]::-webkit-inner-spin-button,
+.contact form .input-box input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icon a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icon a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
 
 
 
