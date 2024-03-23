@@ -247,7 +247,7 @@ span {
 }
 
 .skills-row .skills-column {
-    flex: 1 1 40rem;
+    flex: 1 1 27rem;
 }
 
 .skills-column .title {
@@ -285,7 +285,7 @@ span {
 }
 
 .skills-contant .progress h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -386,7 +386,7 @@ span {
 }
 
 .skills-column:nth-child(3) .skills-contant .progress:nth-child(8) .bar span {
-    width: 90%;
+    width: 55%;
 }
 
 .skills-column:nth-child(4) .skills-contant .progress:nth-child(1) .bar span {
