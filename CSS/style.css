@@ -488,6 +488,10 @@ span {
     font-size: 2rem;
 }
 
+.game-layer h6 {
+    font-size: 1rem;
+}
+
 .game-layer p {
     font-size: 1.5rem;
     margin: .3rem 0 1rem;
@@ -587,7 +591,63 @@ span {
     color: var(--second-bg-color);
 }
 
+.media-container {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 150rem;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.media-item {
+    display: none;
+    max-width: 100%;
+    height: 90%;
+    width: 90%;
+    border-radius: 2rem;
+}
+
+.media-item:first-child {
+    display: block;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.prev-next-button {
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: .5s ease;
+}
+
+#prevButton {
+    left: 100px;
+    padding: 5.5px 5px;
+}
+
+#nextButton {
+    right: 100px;
+    padding: 5.5px 10px;
+}
+
+.prev-next-button:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
 
 
 
