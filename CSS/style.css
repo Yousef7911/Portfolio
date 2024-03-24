@@ -635,11 +635,13 @@ span {
 
 #prevButton {
     left: 100px;
+    top: 375px;
     padding: 5.5px 5px;
 }
 
 #nextButton {
     right: 100px;
+    top: 375px;
     padding: 5.5px 10px;
 }
 
@@ -778,7 +780,67 @@ span {
     .footer p {
         margin-top: 2rem;
     }
+
+    .media-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media-item {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button-container {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    #prevButton {
+        top: 550px;
+    }
+    
+    #nextButton {
+        top: 550px;
+    }
 }
+
+/* For screens between 769px and 991px width */
+@media (min-width: 769px) and (max-width: 991px) {
+    .media-container {
+        height: 40rem;
+    }
+
+    #prevButton {
+        left: 22px;
+        top: 250px;
+    }
+    
+    #nextButton {
+        right: 22px;
+        top: 250px;
+    }
+}
+
+/* For screens between 992px and 1200px width */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .media-container {
+        height: 50rem;
+    }
+
+    #prevButton {
+        left: 90px;
+        top: 275px;
+    }
+    
+    #nextButton {
+        right: 90px;
+        top: 275px;
+    }
+}
+
 
 
 
