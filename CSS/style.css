@@ -758,6 +758,10 @@ span {
     .games-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .footer {
+        padding: 2rem 1%;
+    }
 }
 
 
