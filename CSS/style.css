@@ -47,10 +47,15 @@ body {
 }
 
 .logo {
+    position: relative;
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
+}
+
+.navbar {
+    position: relative;
 }
 
 .navbar a {
@@ -66,6 +71,7 @@ body {
 }
 
 #menu-icon {
+    position: relative;
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
@@ -84,12 +90,16 @@ section {
 }
 
 .home-content h1 {
+    position: relative;
+    display: inline-block;
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .home-content h3 {
+    position: relative;
+    display: inline-block;
     font-size: 3.2rem;
     font-weight: 700;
 }
@@ -133,7 +143,12 @@ span {
 }
 
 .home-content p {
+    position: relative;
     font-size: 1.6rem;
+}
+
+.social-media {
+    position: relative;
 }
 
 .social-media a {
@@ -158,11 +173,12 @@ span {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: none;
     font-size: 1.6rem;
     color: var(--second-bg-color);
     letter-spacing: .1rem;
@@ -171,7 +187,7 @@ span {
 }
 
 .btn:hover {
-    box-shadow: none;
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .about {
@@ -185,6 +201,7 @@ span {
 }
 
 .heading {
+    position: relative;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -230,10 +247,13 @@ span {
 }
 
 .about-contant h3 {
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
 }
 
 .about-contant p {
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -243,6 +263,11 @@ span {
     min-height: auto;
     padding-bottom: 7rem;
     background: var(--bg-color);
+}
+
+.skills h2 {
+    display: inline-block;
+    left: 50%;transform: translate(-50%);
 }
 
 .skills .skills-row {
@@ -256,8 +281,14 @@ span {
 }
 
 .skills-column .title {
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
+}
+
+.skills-column .skills-box {
+    position: relative;
 }
 
 .skills-box .skills-contant {
@@ -432,6 +463,9 @@ span {
 }
 
 .games h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
     margin-bottom: 4rem;
 }
 
@@ -513,6 +547,9 @@ span {
 }
 
 .contact h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
     margin-bottom: 3rem;
 }
 
@@ -524,9 +561,18 @@ span {
 }
 
 .contact form .input-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.contact form .text-field {
+    position: relative;
+}
+
+.contact form .submit-btn {
+    position: relative;
 }
 
 .contact form .input-box input,
@@ -566,6 +612,11 @@ span {
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--second-bg-color);
+}
+
+.footer-text,
+.footer-icon {
+    position: relative;
 }
 
 .footer-text p {
@@ -649,6 +700,48 @@ span {
     background: var(--main-color);
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
+}
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+.animate.scroll {
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+.animate.home-img {
+    width: 50%;
+}
+
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll {
+    background: var(--second-bg-color);
+}
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+.home.show-animate .animate {
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.about.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.games.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
 }
 
 
@@ -909,5 +1002,11 @@ span {
 @keyframes aboutSpinner {
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
     }
 }
