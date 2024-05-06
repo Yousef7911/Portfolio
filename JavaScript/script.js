@@ -18,13 +18,12 @@ window.onscroll = () => {
 
         if(top >= offset && top < offset + height) {
             navLinks.forEach(links => {
-                links .classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                links.classList.remove('active');
             });
-            sec.classList.add('show-animate')
-        }
-        else {
-            sec.classList.remove('show-animate')
+            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            sec.classList.add('show-animate');
+        } else {
+            sec.classList.remove('show-animate');
         }
     });
 
@@ -34,9 +33,10 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 
     let footer = document.querySelector('footer');
+    let footerTop = footer.getBoundingClientRect().top;
 
-    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
-}
+    footer.classList.toggle('show-animate', footerTop <= window.innerHeight);
+};
 
 document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.getElementById("prevButton");
@@ -67,6 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.onbeforeunload = () => {
     for(const form of document.getElementsByTagName('form')) {
-      form.reset();
+        form.reset();
     }
-}
+};
