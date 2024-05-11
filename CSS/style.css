@@ -422,7 +422,7 @@ span {
 }
 
 .skills-column:nth-child(3) .skills-contant .progress:nth-child(8) .bar span {
-    width: 55%;
+    width: 15%;
 }
 
 .skills-column:nth-child(4) .skills-contant .progress:nth-child(1) .bar span {
