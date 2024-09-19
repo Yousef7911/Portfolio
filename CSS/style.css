@@ -258,11 +258,101 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.experience .experience-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15rem;
+}
+
+.experience-row .experience-column {
+    flex: 1 1 40rem;
+}
+
+.experience-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    margin: 0 0 3.5rem 2.5rem;
+}
+
+.experience-column .experience-box {
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+}
+
+.experience-box .experience-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.experience-box .experience-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.experience-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.experience-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.experience-content .content:hover::before {
+    width: 100%;
+} 
+
+.experience-content .content .year {
+    font-size: 2rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.experience-content .content .year i {
+    padding-right: .5rem;
+}
+
+.experience-content .content h3 {
+    font-size: 2.5rem;
+}
+
+.experience-content .content p {
+    font-size: 2rem;
+    padding-top: .5rem;
+}
 
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 .skills h2 {
@@ -307,7 +397,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     z-index: -1;
     transition: .5s;
 }
@@ -459,7 +549,7 @@ span {
 
 
 .games {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .games h2 {
@@ -479,7 +569,7 @@ span {
 .games-container .game-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
     overflow: hidden;
     display: flex;
 }
@@ -546,6 +636,10 @@ span {
     color: var(--main-color);
 }
 
+.contact {
+    background: var(--second-bg-color);
+}
+
 .contact h2 {
     display: inline-block;
     left: 50%;
@@ -581,7 +675,7 @@ span {
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     border: .2rem solid var(--main-color);
     border-radius: .8rem;
     margin: .7rem 0;
@@ -611,7 +705,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text,
@@ -639,7 +733,7 @@ span {
 
 .footer-icon a i {
     font-size: 2.4rem;
-    color: var(--second-bg-color);
+    color: var(--bg-color);
 }
 
 .media-container {
@@ -743,8 +837,7 @@ span {
     width: 50%;
 }
 
-section:nth-child(odd) .animate.scroll,
-.footer .animate.scroll {
+section:nth-child(odd) .animate.scroll {
     background: var(--second-bg-color);
 }
 
@@ -756,7 +849,12 @@ section:nth-child(odd) .animate.scroll,
     animation-delay: calc(.3s * var(--i));
 }
 
+.experience .experience-box .animate.scroll {
+    width: 105%;
+}
+
 .about.show-animate .animate.scroll,
+.experience.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .games.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
@@ -865,6 +963,10 @@ section:nth-child(odd) .animate.scroll,
     .home-img img {
         width: 70vw;
         margin-top: 4rem;
+    }
+
+    .experience {
+        padding: 10rem 4% 5rem 5%;
     }
 
     .games h2 {
